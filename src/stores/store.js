@@ -2,7 +2,6 @@ import { defineStore } from 'pinia'
 
 export const useBeerStore = defineStore('store', {
   state: () => ({
-      count: 2,
       beerList: [],
       detailedView: false,
       detailedBeer: null
@@ -10,9 +9,6 @@ export const useBeerStore = defineStore('store', {
   // could also be defined as
   // state: () => ({ count: 0 })
   actions: {
-    increment() {
-      this.count++
-    },
     detailedBeerView(beer){
       this.detailedBeer = beer;
       this.detailedView = !this.detailedView;
